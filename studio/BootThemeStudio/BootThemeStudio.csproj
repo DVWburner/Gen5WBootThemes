@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>BootThemeStudio</AssemblyName>
+    <RootNamespace>BootThemeStudio</RootNamespace>
+    <Version>1.0.0</Version>
+    <Product>Gen5W Boot Theme Studio</Product>
+    <Company>Gen5W Community</Company>
+    <Description>Create, preview, package, and upload Boot Themes for Gen5W head units and market.ioniqthemes.com.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\dist\gen5w.boot.themes-1.0.0-USB.zip"
+                      Link="Assets\gen5w-bootthemes-usb.zip"
+                      LogicalName="BootThemeStudio.Assets.gen5w-bootthemes-usb.zip"
+                      Condition="Exists('..\..\dist\gen5w.boot.themes-1.0.0-USB.zip')" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,28 @@
+# Build outputs, OEM dumps, samples, signing keys, and caches
+build/
+dist/
+oem-boot-dump/
+oem-splash-dump/
+extracted-samples/
+usb-installer/
+usb-recon/
+custom boot.doc
+packages/gen5w.boot.customizer/
+studio/**/bin/
+studio/**/obj/
+*.apk
+*.idsig
+*.dex
+*.jar
+*.class
+*.p12
+*.pfx
+*.jks
+*.key
+*.pub
+*.zip
+*.img
+*.mp4
+*.log
+.DS_Store
+Thumbs.db

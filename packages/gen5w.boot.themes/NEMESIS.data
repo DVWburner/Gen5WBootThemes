@@ -1,0 +1,27 @@
+[nemesis]
+version=1.1
+id=gen5w.boot.themes
+name=Boot Themes
+type=application,service
+package-version=1.0.0
+short-desc="Manage & download custom Boot Images and Goodbye Videos"
+detailed-desc="Browse, preview, download, and apply custom Boot Images and Goodbye Videos from market.ioniqthemes.com or USB, with instant factory stock restore and zero /system writes."
+os=any
+models=any
+preinstall=scripts/pre.sh
+postinstall=scripts/post.sh
+preuninstall=scripts/preun.sh
+
+[app.0]
+kind=apk
+path=app/BootThemes.apk
+package=com.gen5w.bootthemes
+component=com.gen5w.bootthemes/com.gen5w.bootthemes.MainActivity
+uid=root
+
+[service.0]
+name=bootthemes-helper
+kind=sh
+path=svc/bootthemes-helper.sh
+uid=root
+mode=restart
